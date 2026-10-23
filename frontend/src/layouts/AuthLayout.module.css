@@ -1,0 +1,282 @@
+/* Presentación compartida por las páginas independientes de login y registro. */
+.authPage {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: 47% 53%;
+}
+.story {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #f4f0e6;
+  padding: 42px 55px 25px;
+  min-height: 850px;
+  background: #202fc2;
+  border-right: 2px solid #191921;
+}
+.storyLabel {
+  position: absolute;
+  top: 59px;
+  right: 45px;
+  font: 7px var(--font-mono);
+  letter-spacing: 1.7px;
+  color: #e2e6ff;
+}
+.storyContent {
+  margin-top: 75px;
+  z-index: 1;
+  position: relative;
+}
+.storyContent :global(.eyebrow) {
+  color: #e5ff55;
+  font-size: 11px;
+}
+.storyContent h1 {
+  font: 400 clamp(70px, 7.7vw, 115px)/0.96 var(--font-display);
+  margin-top: 25px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: clamp(55px, 7.5vw, 110px);
+  letter-spacing: -5px;
+}
+.storyContent h1 em {
+  font-weight: 400;
+  font-style: normal;
+  color: #e5ff55;
+}
+.storyContent p {
+  margin-top: 26px;
+  color: #e2e6ff;
+  line-height: 1.9;
+  font-size: 15px;
+}
+.art {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  right: -35px;
+  bottom: 20px;
+  opacity: 0.8;
+}
+.storyFooter {
+  margin-top: auto;
+  padding-top: 80px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e2e6ff;
+  font: 7px var(--font-mono);
+  letter-spacing: 0.8px;
+  position: relative;
+  z-index: 1;
+}
+.storyFooter > span:last-child {
+  margin-left: auto;
+}
+.main {
+  padding: 37px 65px 25px;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  min-width: 0;
+}
+.formWrap {
+  max-width: 380px;
+  width: 100%;
+  margin: auto;
+  padding: 40px 0;
+}
+.formWrap > h2 {
+  font: 400 51px/1.05 var(--font-display);
+  letter-spacing: -1.9px;
+  margin-top: 20px;
+  font-weight: 900;
+  font-size: 48px;
+}
+.formWrap > h2 em {
+  color: var(--green);
+  font-weight: 400;
+  font-style: normal;
+}
+.formWrap > p {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 18px;
+  line-height: 1.8;
+}
+.formWrap form {
+  margin-top: 29px;
+}
+.formWrap label {
+  display: block;
+  color: var(--text);
+  font-size: 11px;
+  font-weight: 550;
+  margin: 17px 0 7px;
+  margin-top: 20px;
+}
+.formWrap input {
+  background: var(--page);
+  border: 1px solid var(--line-strong);
+  font-size: 12px;
+  padding: 13px;
+  width: 100%;
+  color: var(--text);
+  display: block;
+  margin-top: 8px;
+  border-radius: 0;
+  min-height: 48px;
+}
+.formWrap input::placeholder {
+  color: var(--muted);
+}
+.passwordField {
+  position: relative;
+}
+.passwordField input {
+  padding-right: 44px;
+}
+.passwordField button {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+}
+.forgot {
+  color: var(--green);
+  font-size: 11px;
+  display: block;
+  margin: 13px 0 21px auto;
+  padding: 0;
+}
+.submit {
+  margin-top: 13px;
+  width: 100%;
+  min-height: 43px;
+  justify-content: space-between;
+}
+.formWrap > p.switch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+  font-size: 12px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+.switch a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--green);
+  font-weight: 600;
+}
+.notice {
+  padding: 15px;
+  background: var(--surface-subtle);
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: var(--muted);
+  margin-top: 29px;
+  border: 0;
+  border-left: 3px solid #ff623c;
+  border-radius: 0;
+}
+.notice p {
+  line-height: 1.8;
+  font-size: 12px;
+}
+.notice svg {
+  margin-top: 2px;
+}
+.footer {
+  font-size: 11px;
+  color: var(--muted);
+  text-align: center;
+}
+@media (max-width: 1150px) {
+  .story {
+    padding: 35px;
+  }
+  .storyLabel {
+    display: none;
+  }
+  .main {
+    padding: 32px 40px 25px;
+  }
+  .storyContent h1 {
+    font-size: 88px;
+  }
+  .art {
+    width: 340px;
+  }
+}
+@media (max-width: 780px) {
+  .authPage {
+    display: block;
+  }
+  .story {
+    min-height: 0;
+    padding: 25px;
+  }
+  .storyContent {
+    margin-top: 30px;
+    max-width: 65%;
+  }
+  .storyContent h1 {
+    font-size: 45px;
+    letter-spacing: -1.6px;
+    margin: 15px 0 4px;
+    line-height: 1.05;
+  }
+  .storyContent h1 br {
+    display: none;
+  }
+  .storyContent p,
+  .storyFooter {
+    display: none;
+  }
+  .art {
+    width: 220px;
+    height: 190px;
+    bottom: -40px;
+    right: -55px;
+    opacity: 0.8;
+  }
+  .main {
+    padding: 25px;
+    min-height: 620px;
+  }
+  .formWrap {
+    padding: 28px 0 40px;
+  }
+  .formWrap > h2 {
+    font-size: 43px;
+  }
+  .storyContent :global(.eyebrow) {
+    font-size: 11px;
+  }
+}
+.formWrap > p,
+.formWrap label,
+.formWrap input {
+  font-size: 14px;
+}
+@media (max-width: 780px) {
+  .storyContent h1 {
+    font-size: 40px;
+    letter-spacing: -2px;
+  }
+  .art {
+    width: 190px;
+    height: 190px;
+    bottom: -30px;
+  }
+  .formWrap > h2 {
+    font-size: 38px;
+  }
+}
+.art :global(svg) + span {
+  display: none;
+}

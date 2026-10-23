@@ -1,0 +1,127 @@
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 36px 26px 40px;
+  border: 0;
+  border-block: 1px solid var(--line-strong);
+  border-radius: 0;
+  background: transparent;
+  padding-block: 42px;
+}
+.art {
+  position: relative;
+  width: 160px;
+  height: 102px;
+  margin-bottom: 23px;
+  display: grid;
+  place-items: center;
+}
+.symbol {
+  width: 62px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  z-index: 2;
+  transform: rotate(-7deg);
+  background: var(--accent);
+  color: #191921;
+  border: 1px solid var(--text);
+  border-radius: 50%;
+  box-shadow: 4px 4px 0 var(--text);
+}
+.paperBack,
+.paper {
+  display: block;
+  position: absolute;
+  width: 101px;
+  height: 74px;
+  border: 1px solid var(--line-strong);
+  border-radius: 2px;
+  background: var(--surface-subtle);
+  left: 14px;
+  top: 6px;
+  transform: rotate(-14deg);
+}
+.paper {
+  left: 48px;
+  top: 16px;
+  transform: rotate(9deg);
+  background: var(--surface);
+  padding: 16px;
+}
+.paper i {
+  display: block;
+  height: 3px;
+  border-radius: 3px;
+  margin-bottom: 7px;
+  background: var(--line-strong);
+}
+.paper i:last-child {
+  width: 65%;
+}
+.paper ~ .symbol {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  transform: rotate(-9deg) translate(-32px, 28px);
+  background: var(--accent);
+  color: #191921;
+}
+.star {
+  position: absolute;
+  right: 5px;
+  top: 3px;
+  color: var(--green);
+  font-size: 22px;
+}
+.empty h2 {
+  font: 400 27px/1.15 var(--font-display);
+  letter-spacing: -0.7px;
+  max-width: 380px;
+  font-weight: 800;
+  font-size: 28px;
+}
+.empty p {
+  color: var(--muted);
+  line-height: 1.9;
+  max-width: 330px;
+  margin: 12px auto 23px;
+  font-size: 14px;
+}
+.empty :global(.eyebrow) {
+  font-size: 11px;
+  margin-bottom: 12px;
+}
+.compact {
+  border: 0;
+  background: transparent;
+  padding: 22px 8px;
+}
+.compact .art {
+  height: 65px;
+  margin-bottom: 14px;
+}
+.compact .symbol {
+  height: 44px;
+  width: 44px;
+  border-radius: 2px;
+}
+.compact h2 {
+  font: 500 15px/1.5 var(--font-body);
+  letter-spacing: -0.2px;
+  font-size: 16px;
+}
+.compact p {
+  margin: 9px 0 0;
+  font-size: 13px;
+}
+.compact :global(.eyebrow),
+.compact .star {
+  display: none;
+}
+.paperBack,
+.paper {
+  border-radius: 0;
+}

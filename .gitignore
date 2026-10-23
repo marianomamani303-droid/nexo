@@ -1,0 +1,61 @@
+# Dependencies and generated builds
+**/node_modules/
+**/dist/
+**/build/
+**/.vite/
+**/coverage/
+*.tsbuildinfo
+
+# Test and tooling artifacts
+**/playwright-report/
+**/test-results/
+**/blob-report/
+**/.cache/
+.local-tools/
+.eslintcache
+
+# Runtime data
+**/uploads/
+**/storage/
+**/tmp/
+*.log
+*.pid
+*.seed
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.backup
+*.bak
+*.sql.gz
+
+# Secrets and local configuration
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+.npmrc
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+*.jks
+*.keystore
+credentials*.json
+service-account*.json
+**/secrets/
+**/.secrets/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~

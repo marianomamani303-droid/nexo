@@ -1,0 +1,89 @@
+.composer {
+  padding: 20px 21px 13px;
+  background: var(--surface);
+  border: 1px solid var(--text);
+  border-left: 5px solid #ff623c;
+  border-radius: 0;
+}
+.inputRow {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.inputWrap {
+  flex: 1;
+  min-width: 0;
+}
+.inputWrap textarea {
+  border: 0;
+  resize: vertical;
+  min-height: 53px;
+  max-height: 400px;
+  width: 100%;
+  padding: 9px 0;
+  line-height: 1.8;
+  background: transparent;
+  color: var(--text);
+  font-size: 15px;
+}
+.inputWrap textarea::placeholder {
+  color: var(--muted);
+}
+.inputWrap textarea:focus-visible {
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+.footer {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.footer :global(.icon-button) {
+  width: 44px;
+  height: 44px;
+}
+.footer :global(.button) {
+  margin-left: 4px;
+  padding: 8px 13px;
+  font-size: 13px;
+  min-height: 44px;
+}
+.counter {
+  color: var(--muted);
+  font: 8px var(--font-mono);
+  margin-left: auto;
+  font-size: 10px;
+}
+.expanded {
+  padding: 0;
+  background: transparent;
+  border: 0;
+}
+.expanded textarea {
+  min-height: 155px;
+  font-size: 13px;
+}
+@media (max-width: 550px) {
+  .composer {
+    padding: 17px 15px 12px;
+  }
+  .inputWrap textarea {
+    font-size: 12px;
+  }
+  .footer {
+    gap: 7px;
+  }
+  .counter {
+    font-size: 11px;
+  }
+  .footer :global(.button) {
+    margin-left: 0;
+    padding: 8px 10px;
+  }
+  .expanded {
+    padding: 0;
+  }
+}

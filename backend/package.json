@@ -1,0 +1,51 @@
+{
+  "name": "nexo-backend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "db:test": "tsx scripts/db-test.ts",
+    "db:apply": "tsx scripts/db-apply.ts",
+    "db:verify": "tsx scripts/db-verify.ts",
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "test:auth": "tsx --test tests/integration/auth-flow.test.ts",
+    "db:auth": "tsx scripts/migrate.ts --apply --baseline-existing",
+    "test": "tsx scripts/test.ts",
+    "test:unit": "tsx scripts/test.ts unit",
+    "test:integration": "tsx scripts/test.ts integration",
+    "lint": "eslint .",
+    "format": "prettier --write src scripts tests contracts package.json tsconfig.json eslint.config.mjs README.md",
+    "format:check": "prettier --check src scripts tests contracts package.json tsconfig.json eslint.config.mjs README.md",
+    "check": "npm run typecheck && npm run lint && npm run format:check && npm run api:check && npm test",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "api:generate": "tsx scripts/generate-openapi.ts",
+    "api:check": "tsx scripts/generate-openapi.ts --check"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.1",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.0.0",
+    "nodemailer": "^10.1.7",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@apidevtools/swagger-parser": "^13.0.0",
+    "@eslint/js": "^10.0.1",
+    "@types/cookie-parser": "^1.4.10",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^20.0.0",
+    "@types/nodemailer": "^8.0.2",
+    "eslint": "^10.13.0",
+    "prettier": "^3.9.10",
+    "tsx": "^4.0.0",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.72.0"
+  }
+}
